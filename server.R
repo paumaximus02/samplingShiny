@@ -195,9 +195,17 @@ shinyServer(function(input, output) {
     
     y0=y0/sum(y0)*length(stats)*mean(diff(breaks_mh))/mean(diff(x0))
     
+    titleLabel <- switch(input$statistic,
+                         mean = "Sample Means",
+                         median = "Sample Medians",
+                         stdev = "Sample Standard Deviations",
+                         var = "Sample Variances",
+                         max = "Sample Maximums",
+                         min = "Sample Minimums")
+    
     nh<-hist(stats,
              breaks=breaks_mh,
-             main="Statistics",
+             main=titleLabel,
              warn.unused = FALSE,
              col=tcol,
              border=tcol,
