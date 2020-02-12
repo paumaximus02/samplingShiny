@@ -7,7 +7,7 @@ There are some things that break this app, for instance try typing mean <- 70 at
 ```
 rm(list=ls()) )
 require(shiny)
-runGitHub("samplingShiny,"DataScienceUWL")
+runGitHub("samplingShiny","DataScienceUWL")
 ```
 
 If you can make help make the app more robust, then please share!
